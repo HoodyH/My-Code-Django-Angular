@@ -16,12 +16,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 // pages
 import { HeaderComponent } from './pages/header/header.component';
+import { SidenavComponent } from './pages/sidenav/sidenav.component';
 
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
+    SidenavComponent,
   ],
   imports: [
     CommonModule,
@@ -37,6 +39,7 @@ import { HeaderComponent } from './pages/header/header.component';
   ],
   exports: [
     HeaderComponent,
+    SidenavComponent,
   ],
   providers: [
     LocalStorageService,

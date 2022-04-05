@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'frontend';
+
+  private isDark = true;
+
+  @HostBinding('class')
+  get themeMode() {
+    return this.isDark ? 'dark-theme' : 'light-theme';
+  }
+
+  switchDarkMode(isDarkMode: boolean) {
+    this.isDark = isDarkMode;
+  }
 }
